@@ -12,7 +12,7 @@ module.exports = function(req,res,next){
             req.token = verified;
             next();
         } catch (error) {
-            res.redirect("/login?mes="+error.message);
+            res.send({message:"authentication required"});
         }
        
 
